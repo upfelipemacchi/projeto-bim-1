@@ -1,0 +1,19 @@
+header.header {
+    background-color: var(--orange);
+}
+
+li.active {
+    text-decoration: underline 2px;
+}
+
+@media screen and (max-width: 767px) {
+    li.nav-item {
+        transition: background-color .2s;
+        border-radius: 4px;
+        padding-left: 8px;
+    }
+
+    li.nav-item:hover {
+        background-color: var(--dark-orange);
+    }
+}

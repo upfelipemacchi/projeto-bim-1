@@ -1,0 +1,19 @@
+.home-banner {
+    height: 90px;
+    display: flex;
+    justify-content: end;
+    background-color: var(--orange);
+}
+
+.img-banner {
+    width: 207px;
+    height: 100%;
+    background-image: url('src/assets/img/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.bgGray {
+    background-color: var(--light-gray);
+}
