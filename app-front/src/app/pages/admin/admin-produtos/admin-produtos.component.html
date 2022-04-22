@@ -1,0 +1,18 @@
+
+<router-outlet></router-outlet>
+
+<btn-modal [label]="'adicionar'" [routerLink]="['adicionar']"></btn-modal>
+
+<div class="mt-3" *ngFor="let produto of produtos">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{produto.nome}}</h5>
+            <p class="card-text mb-0">Preço: <span class="text-muted">R$ {{produto.preco.toFixed(2).replace('.', ',')}}</span></p>
+            <p class="card-text mb-0">Quantidade: <span class="text-muted">{{produto.quantidade}}</span></p>
+            <p class="card-text">Imagem: <span class="text-muted">{{produto.img}}</span></p>
+            <btn-modal [label]="'editar'" [routerLink]="['editar/' + produto.id]"></btn-modal>
+            <span class="ml-3"></span>
+            <btn-modal [label]="'excluir'" [class]="'btn-danger'" [routerLink]="['excluir/' + produto.id]"></btn-modal>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-img {
+    width: 200px;
+    background-color: #464646;
+}
+
+@media screen and (max-width: 430px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+
+    .card-img {
+        align-self: center;
+    }
+}

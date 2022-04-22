@@ -21,5 +21,18 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, i {
 }
 
 a:hover, a:hover span {
-    color: var(--white);
+    color: var(--dark-gray);
+}
+
+html {
+    background-color: var(--black);
+}
+
+body {
+    background-color: var(--white);
+}
+
+.btn {
+    border-radius: unset;
+    padding: 8px 40px;
 }

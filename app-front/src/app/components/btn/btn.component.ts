@@ -13,5 +13,6 @@ export class BtnComponent implements OnInit {
   }
 
   @Input() label: string | undefined;
+  @Input() class: string = 'btn-default';
 
 }
