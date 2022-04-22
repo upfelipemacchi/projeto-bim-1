@@ -19,4 +19,7 @@ export class ModalComponent implements OnInit {
     @Input() cancelarTxt: string = 'fechar';
     @Input() confirmarTxt: string = 'salvar';
 
+    @Input() cancelarLink: any = '../';
+    @Input() confirmarLink: any = '../';
+
 }
