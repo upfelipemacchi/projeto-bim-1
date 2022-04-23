@@ -25,6 +25,10 @@ import { ModalComponent } from './layout/modal/modal.component';
 import { BtnModalComponent } from './components/btn-modal/btn-modal.component';
 import { FormProdutoComponent } from './layout/form-produto/form-produto.component';
 import {FormsModule} from "@angular/forms";
+import { AdicionarUsuarioComponent } from './pages/admin/admin-usuarios/adicionar-usuario/adicionar-usuario.component';
+import { EditarUsuarioComponent } from './pages/admin/admin-usuarios/editar-usuario/editar-usuario.component';
+import { ExcluirUsuarioComponent } from './pages/admin/admin-usuarios/excluir-usuario/excluir-usuario.component';
+import { FormUsuarioComponent } from './layout/form-usuario/form-usuario.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import {FormsModule} from "@angular/forms";
       ModalComponent,
       BtnModalComponent,
       FormProdutoComponent,
+      AdicionarUsuarioComponent,
+      EditarUsuarioComponent,
+      ExcluirUsuarioComponent,
+      FormUsuarioComponent,
   ],
     imports: [
         BrowserModule,

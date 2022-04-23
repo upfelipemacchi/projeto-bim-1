@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label>Nome</label>
+    <input type="text" name="nome" class="form-control" placeholder="Informe o nome do usuário" [(ngModel)]="usuario.nome">
+</div>
+<div class="form-group">
+    <label>Usuário</label>
+    <input type="text" name="usuario" class="form-control" placeholder="Informe o usuário" [(ngModel)]="usuario.usuario">
+</div>
+<div class="form-group">
+    <label>Senha</label>
+    <input type="password" name="senha" class="form-control" placeholder="Informe a senha" [(ngModel)]="usuario.senha">
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" id="admin" class="custom-control-input" [(ngModel)]="usuario.admin">
+    <label for="admin" class="custom-control-label">Administrador</label>
+</div>
+

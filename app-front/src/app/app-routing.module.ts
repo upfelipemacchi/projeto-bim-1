@@ -10,6 +10,9 @@ import {AdicionarProdutoComponent} from "./pages/admin/admin-produtos/adicionar-
 import {AdminUsuariosComponent} from "./pages/admin/admin-usuarios/admin-usuarios.component";
 import {EditarProdutoComponent} from "./pages/admin/admin-produtos/editar-produto/editar-produto.component";
 import {ExcluirProdutoComponent} from "./pages/admin/admin-produtos/excluir-produto/excluir-produto.component";
+import {AdicionarUsuarioComponent} from "./pages/admin/admin-usuarios/adicionar-usuario/adicionar-usuario.component";
+import {EditarUsuarioComponent} from "./pages/admin/admin-usuarios/editar-usuario/editar-usuario.component";
+import {ExcluirUsuarioComponent} from "./pages/admin/admin-usuarios/excluir-usuario/excluir-usuario.component";
 
 const routes: Routes = [
     {
@@ -52,15 +55,15 @@ const routes: Routes = [
                 children: [
                     {
                         path: 'adicionar',
-                        component: AdicionarProdutoComponent,
+                        component: AdicionarUsuarioComponent,
                     },
                     {
-                        path: 'editar',
-                        component: AdicionarProdutoComponent,
+                        path: 'editar/:id',
+                        component: EditarUsuarioComponent,
                     },
                     {
-                        path: 'excluir',
-                        component: AdicionarProdutoComponent,
+                        path: 'excluir/:id',
+                        component: ExcluirUsuarioComponent,
                     },
                 ]
             }

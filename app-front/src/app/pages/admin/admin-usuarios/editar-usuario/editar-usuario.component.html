@@ -1,0 +1,12 @@
+<form autocomplete="off">
+    <modal [titulo]="'Editar usuário'" [cancelarLink]="'../../'">
+        <div body>
+            <form-usuario [usuario]="usuario"></form-usuario>
+        </div>
+        <div footer>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['../../']">cancelar</button>
+            <button type="button" class="btn btn-success ml-3" data-dismiss="modal" (click)="salvar()">salvar</button>
+        </div>
+    </modal>
+</form>
+
