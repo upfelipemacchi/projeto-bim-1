@@ -5,14 +5,14 @@
       "nome": "Roupinha",
       "img": "../../../assets/produtos/produto-1.jpg",
       "preco": 90,
-      "quantidade": 10
+      "quantidade": 16
     },
     {
       "id": 2,
       "nome": "Bandana",
       "img": "https://www.petlove.com.br/images/products/240810/small/Bandana_Pickorruchos_Azul_Xadrez_1195672_01.jpg?1627781213",
       "preco": 70,
-      "quantidade": 7
+      "quantidade": 24
     },
     {
       "id": 3,
