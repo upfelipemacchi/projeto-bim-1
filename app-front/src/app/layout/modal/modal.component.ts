@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'modal',
@@ -9,17 +9,9 @@ export class ModalComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void { }
 
     @Input() titulo: string = 'Título';
-
-    @Input() confirmarClass: string = 'btn-success';
-
-    @Input() cancelarTxt: string = 'fechar';
-    @Input() confirmarTxt: string = 'salvar';
-
-    @Input() cancelarLink: any = '../';
-    @Input() confirmarLink: any = '../';
+    @Input() cancelarLink: string = '../';
 
 }

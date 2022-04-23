@@ -1,4 +1,11 @@
-<modal [titulo]="'Editar produto'"
-       [cancelarLink]="'../../'">
-    <form-produto></form-produto>
-</modal>
+<form autocomplete="off">
+    <modal [titulo]="'Editar produto'" [cancelarLink]="'../../'">
+        <div body>
+            <form-produto [produto]="produto"></form-produto>
+        </div>
+        <div footer>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['../../']">cancelar</button>
+            <button type="button" class="btn btn-success ml-3" data-dismiss="modal" (click)="salvar()">salvar</button>
+        </div>
+    </modal>
+</form>

@@ -1,6 +1,9 @@
-<modal [titulo]="'Excluir produto'"
-       [confirmarClass]="'btn-danger'"
-       [confirmarTxt]="'excluir'"
-       [cancelarLink]="'../../'">
-    <p>Tem certeza que deseja excluir este produto?</p>
+<modal [titulo]="'Excluir produto'" [cancelarLink]="'../../'">
+    <div body>
+        <p>Tem certeza que deseja excluir este produto?</p>
+    </div>
+    <div footer>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" [routerLink]="['../../']">cancelar</button>
+        <button type="button" class="btn btn-danger ml-3" data-dismiss="modal" (click)="salvar()">excluir</button>
+    </div>
 </modal>

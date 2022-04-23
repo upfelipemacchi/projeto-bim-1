@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../../../../../models/produto.model';
+import { ProdutoService } from '../../../../../services/produto.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adicionar-produto',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdicionarProdutoComponent implements OnInit {
 
-  constructor() { }
+    produto: Produto = new Produto();
 
-  ngOnInit(): void {
-  }
+    constructor(private produtoService: ProdutoService,
+                private router: Router) { }
+
+    ngOnInit(): void { }
+
+    salvar() {
+        this.produtoService.incluirProduto(this.produto).subscribe(() => {
+            this.router.navigate(['/admin/produtos']);
+        });
+    }
 
 }
