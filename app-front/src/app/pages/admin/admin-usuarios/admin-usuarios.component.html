@@ -9,7 +9,7 @@
             <h5 class="card-title mb-0">{{usuario.nome}}</h5>
             <p class="card-text text-muted mb-0">{{usuario.usuario}}</p>
             <p class="card-text text-muted">Administrador: <span class="{{usuario.admin ? 'text-success' : 'text-danger'}}">{{usuario.admin ? 'Sim' : 'Não'}}</span></p>
-            <btn-modal [label]="'editar'" [routerLink]="['editar/' + usuario.id]"></btn-modal>
+            <btn-modal [label]="'editar'" [class]="'btn-default ' + (usuario.id == 1 && 'disabled')" [routerLink]="[(usuario.id != 1 ? 'editar/' + usuario.id : '/admin/usuarios')]"></btn-modal>
             <span class="ml-3"></span>
             <btn-modal [label]="'excluir'" [class]="'btn-danger ' + (usuario.id == 1 && 'disabled')" [routerLink]="[(usuario.id != 1 ? 'excluir/' + usuario.id : '/admin/usuarios')]"></btn-modal>
         </div>
