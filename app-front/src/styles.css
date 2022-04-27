@@ -36,3 +36,7 @@ body {
     border-radius: unset;
     padding: 8px 40px;
 }
+
+.bgGray {
+    background-color: var(--light-gray);
+}
