@@ -15,11 +15,25 @@
       "quantidade": 24
     },
     {
-      "id": 3,
-      "nome": "Agasalho",
-      "img": "https://www.petlove.com.br/images/products/241434/small/Agasalho_Pickorruchos_Puppy_Estampas_Sortidas_1907959_%282%29.jpg?1627784082",
-      "preco": 120,
-      "quantidade": 8
+      "id": 4,
+      "nome": "Roupa de gato",
+      "img": "https://www.petlove.com.br/images/products/222984/small/Roupa_P%C3%B3s_Castra%C3%A7%C3%A3o_Pet_Med_Duo_Dry_Gatos_Rosa_2490631.jpg?1627714268",
+      "preco": 60,
+      "quantidade": 24
+    },
+    {
+      "id": 5,
+      "nome": "Brinquedo",
+      "img": "https://www.petlove.com.br/images/products/87805/small/70361.jpg?1627502005",
+      "preco": 30,
+      "quantidade": 18
+    },
+    {
+      "id": 6,
+      "nome": "Galinha",
+      "img": "https://www.petlove.com.br/images/products/200114/small/Brinquedo_Sonoro_The_Pets_Brasil_Frango_Gritador_1962761.jpg?1627642631",
+      "preco": 15,
+      "quantidade": 1
     }
   ],
   "usuarios": [
