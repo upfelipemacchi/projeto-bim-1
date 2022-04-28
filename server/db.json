@@ -35,7 +35,7 @@
       "nome": "Felipe",
       "usuario": "felipe",
       "senha": "teste123",
-      "admin": false
+      "admin": true
     },
     {
       "id": 3,
@@ -50,6 +50,27 @@
       "usuario": "ohhdamiao",
       "senha": "wpjvnpvjkpadf",
       "admin": false
+    },
+    {
+      "id": 5,
+      "nome": "Suchi",
+      "usuario": "suchi",
+      "senha": "suchizinho",
+      "admin": false
+    },
+    {
+      "id": 6,
+      "nome": "Grazi",
+      "usuario": "grazii",
+      "senha": "1234",
+      "admin": true
+    },
+    {
+      "id": 7,
+      "nome": "Yuri",
+      "usuario": "yurivaleixo",
+      "senha": "5678",
+      "admin": true
     }
   ]
 }
