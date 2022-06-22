@@ -11,26 +11,26 @@ export class UsuarioService {
 
     constructor(private http: HttpClient) { }
 
-    URL = "http://localhost:3001/usuarios";
+    URL = "http://localhost:3000/usuarios";
 
     listarUsuarios() : Observable<Usuario[]> {
-        return this.http.get<Usuario[]>(this.URL);
+        return this.http.get<Usuario[]>(this.URL + "/listar");
     }
 
-    buscarUsuarioPorId(id : number) : Observable<Usuario> {
-        return this.http.get<Usuario>(`${this.URL}/${id}`)
+    buscarUsuarioPorId(id : string) : Observable<Usuario> {
+        return this.http.get<Usuario>(`${this.URL}/buscar/${id}`)
     }
 
     incluirUsuario(usuario : Usuario) : Observable<any> {
-        return this.http.post(this.URL, usuario);
+        return this.http.post(this.URL + "/cadastrar", usuario);
     }
 
-    atualizarUsuario(usuario : Usuario, id : number) : Observable<any> {
-        return this.http.put(`${this.URL}/${id}`, usuario);
+    atualizarUsuario(usuario : Usuario, id : string) : Observable<any> {
+        return this.http.put(`${this.URL}/atualizar/${id}`, usuario);
     }
 
-    excluirUsuario(id : number) : Observable<any> {
-        return this.http.delete(`${this.URL}/${id}`);
+    excluirUsuario(id : string) : Observable<any> {
+        return this.http.delete(`${this.URL}/deletar/${id}`);
     }
 
 }

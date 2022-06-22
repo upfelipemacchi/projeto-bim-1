@@ -11,26 +11,26 @@ export class ProdutoService {
 
     constructor(private http: HttpClient) { }
 
-    URL = "http://localhost:3001/produtos";
+    URL = "http://localhost:3000/produtos";
 
     listarProdutos() : Observable<Produto[]> {
-        return this.http.get<Produto[]>(this.URL);
+        return this.http.get<Produto[]>(this.URL + "/listar");
     }
 
-    buscarProdutoPorId(id : number) : Observable<Produto> {
-        return this.http.get<Produto>(`${this.URL}/${id}`)
+    buscarProdutoPorId(id : string) : Observable<Produto> {
+        return this.http.get<Produto>(`${this.URL}/buscar/${id}`)
     }
 
     incluirProduto(produto : Produto) : Observable<any> {
-        return this.http.post(this.URL, produto);
+        return this.http.post(this.URL + "/cadastrar", produto);
     }
 
-    atualizarProduto(produto : Produto, id : number) : Observable<any> {
-        return this.http.put(`${this.URL}/${id}`, produto);
+    atualizarProduto(produto : Produto, id : string) : Observable<any> {
+        return this.http.put(`${this.URL}/atualizar/${id}`, produto);
     }
 
-    excluirProduto(id : number) : Observable<any> {
-        return this.http.delete(`${this.URL}/${id}`);
+    excluirProduto(id : string) : Observable<any> {
+        return this.http.delete(`${this.URL}/deletar/${id}`);
     }
 
 }

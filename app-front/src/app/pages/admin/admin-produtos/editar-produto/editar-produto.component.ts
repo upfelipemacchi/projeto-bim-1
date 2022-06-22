@@ -18,13 +18,13 @@ export class EditarProdutoComponent implements OnInit {
 
     ngOnInit(): void {
         const str = this.route.snapshot.paramMap.get('id')
-        this.produtoService.buscarProdutoPorId(Number(str)).subscribe(produto => {
+        this.produtoService.buscarProdutoPorId(`${str}`).subscribe(produto => {
             this.produto = produto;
         });
     }
 
     salvar() {
-        this.produtoService.atualizarProduto(this.produto, this.produto.id).subscribe(() => {
+        this.produtoService.atualizarProduto(this.produto, `${this.produto.id}`).subscribe(() => {
             this.router.navigate(['/admin/produtos']);
         });
     }

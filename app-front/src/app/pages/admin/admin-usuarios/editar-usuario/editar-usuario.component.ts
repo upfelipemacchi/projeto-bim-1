@@ -19,7 +19,7 @@ export class EditarUsuarioComponent implements OnInit {
 
     ngOnInit(): void {
         const str = this.route.snapshot.paramMap.get('id')
-        this.usuarioService.buscarUsuarioPorId(Number(str)).subscribe(usuario => {
+        this.usuarioService.buscarUsuarioPorId(`${str}`).subscribe(usuario => {
             this.usuario = usuario;
         });
     }
@@ -27,7 +27,7 @@ export class EditarUsuarioComponent implements OnInit {
     salvar() {
         this.usuario.usuario = this.usuario.usuario.toLowerCase().replace(/[\W_]/g, '');
 
-        this.usuarioService.atualizarUsuario(this.usuario, this.usuario.id).subscribe(() => {
+        this.usuarioService.atualizarUsuario(this.usuario, `${this.usuario.id}`).subscribe(() => {
             this.router.navigate(['/admin/usuarios']);
         });
     }

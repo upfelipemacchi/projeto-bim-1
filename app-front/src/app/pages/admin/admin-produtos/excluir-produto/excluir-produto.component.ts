@@ -18,13 +18,13 @@ export class ExcluirProdutoComponent implements OnInit {
 
     ngOnInit(): void {
         const str = this.route.snapshot.paramMap.get('id')
-        this.produtoService.buscarProdutoPorId(Number(str)).subscribe(produto => {
+        this.produtoService.buscarProdutoPorId(`${str}`).subscribe(produto => {
             this.produto = produto;
         });
     }
 
     salvar() {
-        this.produtoService.excluirProduto(this.produto.id).subscribe(() => {
+        this.produtoService.excluirProduto(`this.produto.id`).subscribe(() => {
             this.router.navigate(['/admin/produtos']);
         });
     }

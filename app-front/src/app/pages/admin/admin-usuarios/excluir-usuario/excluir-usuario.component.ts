@@ -18,13 +18,13 @@ export class ExcluirUsuarioComponent implements OnInit {
 
     ngOnInit(): void {
         const str = this.route.snapshot.paramMap.get('id')
-        this.usuarioService.buscarUsuarioPorId(Number(str)).subscribe(usuario => {
+        this.usuarioService.buscarUsuarioPorId(`${str}`).subscribe(usuario => {
             this.usuario = usuario;
         });
     }
 
     salvar() {
-        this.usuarioService.excluirUsuario(this.usuario.id).subscribe(() => {
+        this.usuarioService.excluirUsuario(`${this.usuario.id}`).subscribe(() => {
             this.router.navigate(['/admin/usuarios']);
         });
     }
